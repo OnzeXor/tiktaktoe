@@ -125,20 +125,32 @@ var matriz = [
     }
     function xatk(){
       print();
-        console.log('Você é o X')
-        const linha = prompt(`escolha a linha.`);
-        const coluna = prompt(`escolha a coluna.`);
-        matriz[linha-1][coluna-1] = 'x'
-        
+        limiter = 0;
+        while(limiter ==0){
+          console.log('Você é o X')
+          const linha = prompt(`escolha a linha.`);
+          const coluna = prompt(`escolha a coluna.`);
+          if (matriz[linha-1][coluna-1] == '+'){
+            matriz[linha-1][coluna-1] = 'x'
+            limiter = 1
+          }
+        }
       }
     
     function oatk(){
       print();
-        console.log('Você é o O')
-        const linha = prompt(`escolha a linha.`);
-        const coluna = prompt(`escolha a coluna.`);
-        matriz[linha-1][coluna-1] = 'o'
-        
+      limiter =0;
+      while(limiter==0){
+         
+          console.log('Você é o O')
+          const linha = prompt(`escolha a linha.`);
+          const coluna = prompt(`escolha a coluna.`);
+          if(matriz[linha-1][coluna-1] == '+'){
+            matriz[linha-1][coluna-1] = 'o'
+            limiter=1
+          } 
+          
+      }
     }
 
     function chooser(){
